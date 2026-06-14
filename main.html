@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PREX | Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Devicons for tech logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div class="loader-logo">PREX</div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--text3)">Initializing...</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-logo">PREX</div>
+        <ul class="nav-links">
+            <li><a href="#hero" data-section="hero">Home</a></li>
+            <li><a href="#about" data-section="about">About</a></li>
+            <li><a href="#skills" data-section="skills">Skills</a></li>
+            <li><a href="#projects" data-section="projects">Projects</a></li>
+            <li><a href="#experience" data-section="experience">Experience</a></li>
+            <li><a href="#techstack" data-section="techstack">Stack</a></li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#techstack">Tech Stack</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle-mobile" id="themeToggleMobile">
+            <span id="themeToggleMobileIcon">🌙</span> Toggle Theme
+        </button>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="glow-orb"
+            style="width:400px;height:400px;background:var(--accent);opacity:0.06;top:-100px;left:-100px;"></div>
+        <div class="glow-orb" style="width:300px;height:300px;background:var(--cyan);opacity:0.06;bottom:0;right:10%;">
+        </div>
+
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="900">
+                <div class="hero-eyebrow">Welcome to my portfolio</div>
+                <h1 class="hero-name">
+                    Hi, I'm<br />
+                    <span id="heroName">Prex Louis R. Nati</span>
+                </h1>
+                <div class="hero-typing-wrap">
+                    I am a <span class="typed-text" id="typedText"></span><span class="cursor"></span>
+                </div>
+                <p class="hero-tagline">
+                    Building immersive digital experiences — from web applications to interactive Unity games. Turning
+                    ideas into reality, one line of code at a time.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        View My Projects
+                        <a href="ASSET/Files/PREX-RESUME.docx" class="btn btn-ghost" id="resumeBtn" download>
+                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Resume
+                        </a>
+                </div>
+            </div>
+            <div class="hero-avatar-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                <div class="hero-avatar-ring">
+                    <div class="hero-avatar-inner">
+                        <img src="ASSET/Me/PREX1.png" alt="Profile Photo"
+                            onerror="this.style.display='none';this.parentElement.querySelector('.hero-avatar-placeholder').style.display='flex';"
+                            style="width:100%;height:100%;object-fit:cover;" />
+                        <div class="hero-avatar-placeholder" style="display:none;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-chip">
+                        <div>
+                            <div class="stat-chip-val">1+</div>
+                            <div class="stat-chip-label">Years Coding</div>
+                        </div>
+                    </div>
+                    <div class="stat-chip">
+                        <div>
+                            <div class="stat-chip-val">5</div>
+                            <div class="stat-chip-label">Projects Built</div>
+                        </div>
+                    </div>
+                    <div class="stat-chip">
+                        <div>
+                            <div class="stat-chip-val">10+</div>
+                            <div class="stat-chip-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-img-wrap" data-aos="fade-right" data-aos-duration="800">
+                <div class="about-img-frame">
+                    <img src="ASSET/Me/PREX2.png" alt="About Me"
+                        onerror="this.style.display='none';this.parentElement.querySelector('.about-img-placeholder').style.display='flex';"
+                        style="width:100%;height:100%;object-fit:cover;" />
+                    <div class="about-img-placeholder" style="display:none;">
+                        <svg width="80" height="80" fill="none" stroke="currentColor" stroke-width="1"
+                            viewBox="0 0 24 24" style="opacity:0.3">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span style="color:var(--text3);font-size:0.8rem">Your photo here</span>
+                    </div>
+                </div>
+                <div class="about-img-accent"></div>
+                <div class="about-border-deco"></div>
+                <div class="about-badge">
+                    <div class="about-badge-emoji"></div>
+                    <div class="about-badge-text"><strong>Web Developer</strong></div>
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                <div class="section-tag">About Me</div>
+                <h2 class="section-title">Aspiring Web Developer</h2>
+                <p>Hi! I'm <strong style="color:var(--accent2)">Prex Louis R. Nati</strong>, I am a fresh graduate with
+                    a Bachelor of Science in Information Technology (BSIT) and an aspiring Web Developer. I enjoy
+                    creating user-friendly and functional web applications while continuously improving my technical and
+                    problem-solving skills. </p>
+                <p>Throughout my academic journey, I developed a strong interest in web development and software design,
+                    which motivated me to build various projects and gain hands-on experience</p>
+                <p>I am eager to contribute to meaningful projects, learn from experienced professionals, and grow my
+                    career in the technology industry.</p>
+                <p style="color:var(--accent2);font-style:italic">"Code is poetry, and I'm here to write epics."</p>
+                <div class="about-highlights">
+                    <span class="highlight-pill">Information Technology Student</span>
+                    <span class="highlight-pill">UI/UX Designer </span>
+                    <span class="highlight-pill">Web Developer</span>
+                    <span class="highlight-pill">Game Developer</span>
+                </div>
+                <div style="margin-top:32px"><a href="#contact" class="btn btn-primary">Let's Talk</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <div class="skills-container">
+            <div style="text-align:center;margin-bottom:60px" data-aos="fade-up">
+                <div class="section-tag" style="justify-content:center;display:flex">Technical Skills</div>
+                <h2 class="section-title" style="text-align:center">What I Work With</h2>
+                <p class="section-sub" style="margin:0 auto;text-align:center">Proficiency levels across languages and
+                    tools I use regularly.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-card-title">Programming Languages</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-csharp-plain colored"></i> C#</div><span
+                                class="skill-pct">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-python-plain colored"></i> Python</div><span
+                                class="skill-pct">50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="50"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="60"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card-title">Web Technologies</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5</div><span
+                                class="skill-pct">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-css3-plain colored"></i> CSS3</div><span
+                                class="skill-pct">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-mysql-plain colored"></i> MySQL</div><span
+                                class="skill-pct">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card-title">Tools &amp; Platforms</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-unity-original"></i> Unity</div><span
+                                class="skill-pct">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-git-plain colored"></i> Git</div><span
+                                class="skill-pct">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name"><i class="devicon-figma-plain colored"></i>Figma</div><span
+                                class="skill-pct">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-pct="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="projects-container">
+            <div data-aos="fade-up" style="margin-bottom:40px">
+                <div class="section-tag">My Work</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-sub">A collection of things I've built — from games to web apps. Click any project to
+                    view the image slider.</p>
+            </div>
+            <div class="filter-bar" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="unity">Unity</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="csharp">C#</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="project-card" data-tags="unity,csharp" data-aos="fade-up" data-aos-delay="0"
+                    data-title="3D Adventure Game"
+                    data-desc="NetMaster is a Unity-based 3D networking simulation game designed to provide an engaging and hands-on learning experience for students and beginners in computer networking. Inspired by networking simulation tools, the project transforms traditional networking concepts into an interactive game environment where players can physically connect devices, configure network settings, and troubleshoot networking scenarios."
+                    data-tech="Unity,C#,Figma,Blender,Firebase"
+                    data-features="Interactive 3D networking environment built with Unity.|Ethernet cable connection and device linking system. |Functional networking devices (Switch, Router, Hub, WAP, Server, PC). |Sandbox mode for free experimentation and practice.|Level-based learning progression for networking concepts."
+                    data-github="https://github.com/Prexaintgood"
+                    data-images="ASSET/NetMaster/Net1.png,ASSET/NetMaster/Net2.png,ASSET/NetMaster/Net3.png,ASSET/NetMaster/Net4.png,ASSET/NetMaster/Net5.png,ASSET/NetMaster/Net6.png,ASSET/NetMaster/Net7.png"
+                    data-emoji="🎮">
+                    <div class="project-thumb"><img src="ASSET/NetMaster/Net0.png" alt="3D Adventure Game"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+                        <div class="project-thumb-placeholder" style="display:none;">🎮</div>
+                        <div class="project-overlay"><span class="project-overlay-text">Click to view details →</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span class="project-tag">Unity</span><span
+                                class="project-tag">C#</span><span class="project-tag">3D</span></div>
+                        <div class="project-title">Network Master</div>
+                        <p class="project-desc">NetMaster is a 3D networking simulation game developed in Unity that
+                            helps users learn fundamental computer networking concepts through interactive gameplay.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" data-tags="web" data-aos="fade-up" data-aos-delay="100"
+                    data-title="Task Management App"
+                    data-desc="The NetMaster Web Portal is a full-featured web application developed to support and extend the functionality of the NetMaster networking simulation game. The platform allows players to create accounts, securely log in, monitor their achievements, submit bug reports, provide suggestions, and communicate directly with administrators."
+                    data-tech="HTML,CSS,JavaScript,Firebase"
+                    data-features="User registration and secure login system.|Achievement tracking and player profile management.|Suggestion and feedback submission portal.|Admin dashboard for monitoring player activity.|User account management tools."
+                    data-github="https://github.com/Prexaintgood"
+                    data-images="ASSET/Web/WebNet2.png,ASSET/Web/WebNet3.png,ASSET/Web/WebNet4.png,ASSET/Web/WebNet5.png,ASSET/Admin/Admin1.png,ASSET/Admin/Admin2.png,ASSET/Admin/Admin3.png,ASSET/Admin/Admin4.png,ASSET/User/User1.png,ASSET/User/User2.png,ASSET/User/User3.png"
+                    data-emoji="📋">
+                    <div class="project-thumb"><img src="ASSET/Web/WebNet1.png" alt="Task Management App"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+                        <div class="project-thumb-placeholder" style="display:none;">📋</div>
+                        <div class="project-overlay"><span class="project-overlay-text">Click to view details →</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span class="project-tag">Html</span><span
+                                class="project-tag">Firebase</span><span class="project-tag">JS</span></div>
+                        <div class="project-title">Network Master Website</div>
+                        <p class="project-desc">A web-based companion platform for NetMaster that provides user account
+                            management, achievement tracking, bug reporting, player feedback, and administrative tools.
+                            The system includes separate user and administrator portals to improve communication,
+                            community management, and game monitoring.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card" data-tags="web" data-aos="fade-up" data-aos-delay="200" data-title="Dev Type"
+                    data-desc="The DevType Practice Platform is a web application created to help developers and programming students improve their typing speed, coding accuracy, and familiarity with programming syntax. Unlike traditional typing websites, the platform focuses specifically on source code, allowing users to practice typing real programming languages in a structured environment."
+                    data-tech="HTML,CSS,JS"
+                    data-features="Programming-focused typing practice.|Multiple programming language selections. |Difficulty level selection.|Custom code paste functionality.|Error detection and feedback system."
+                    data-github="https://github.com/Prexaintgood"
+                    data-images="ASSET/Type/DevType1.png,ASSET/Type/DevType2.png,ASSET/Type/DevType3.png,ASSET/Type/DevType4.png,ASSET/Type/DevType5.png"
+                    data-emoji="📊">
+                    <div class="project-thumb"><img src="ASSET/Type/DevType1.png" alt="Data Analyzer CLI"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+                        <div class="project-thumb-placeholder" style="display:none;">📊</div>
+                        <div class="project-overlay"><span class="project-overlay-text">Click to view details →</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span class="project-tag">Html</span><span
+                                class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+                        <div class="project-title">DevType</div>
+                        <p class="project-desc">A web-based typing practice platform designed for programmers to improve
+                            coding speed and accuracy. Users can select programming languages, choose difficulty levels,
+                            and even paste their own source code for personalized typing exercises..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-carousel" id="modalCarousel">
+                    <div class="modal-carousel-track" id="modalCarouselTrack"></div><button class="modal-carousel-prev"
+                        id="modalCarouselPrev" aria-label="Previous image">‹</button><button class="modal-carousel-next"
+                        id="modalCarouselNext" aria-label="Next image">›</button>
+                    <div class="modal-carousel-dots" id="modalCarouselDots"></div>
+                </div><button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-section-label">Tech Stack</div>
+                <div class="modal-tech" id="modalTech"></div>
+                <div class="modal-section-label">Features</div>
+                <ul class="modal-features" id="modalFeatures"></ul>
+                <div id="modalGithubWrap"><a id="modalGithub" href="#" target="_blank" class="btn btn-primary"><svg
+                            width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>View on GitHub</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+        <div class="exp-container">
+            <div data-aos="fade-up" style="margin-bottom:60px">
+                <div class="section-tag">My Journey</div>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-sub">Where I've worked, studied, and built things that matter.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Internship – Power Apps Developer Intern</div>
+                                <div class="exp-org">Development Bank of the Philippines</div>
+                            </div>
+                            <div class="exp-duration">June 2026 - April 2026</div>
+                        </div>
+                        <ul class="exp-desc">
+                            <li>Assisted in developing and maintaining business applications using Microsoft Power Apps.
+                            </li>
+                            <li>Enhanced existing system features to improve workflow efficiency and user productivity.
+                            </li>
+                            <li>Updated and redesigned user interface components for a better user experience.</li>
+                            <li>Collaborated with team members to identify and implement system improvements.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Capstone Project 2 – Team Leader & Unity Developer</div>
+                                <div class="exp-org">National College of Science & Technology</div>
+                            </div>
+                            <div class="exp-duration">Mar 2025 – Dec 2025</div>
+                        </div>
+                        <ul class="exp-desc">
+                            <li>Led a team in developing a 3D networking simulation game using Unity.</li>
+                            <li>Programmed core gameplay mechanics and networking-related features.</li>
+                            <li>Implemented administrative controls for managing users and system content.</li>
+                            <li>Managed project planning, task delegation, and team coordination throughout development.
+                            </li>
+                            <li>Developed a companion web application with login, registration, and user profile
+                                management features.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Capstone Project 1 – Programmer 1 (Veterinary E-Commerce)
+                                </div>
+                                <div class="exp-org">National College of Science & Technology</div>
+                            </div>
+                                     <div class="exp-duration">Mar 2024 – Oct 2024</div>
+                        </div>
+                        <ul class="exp-desc">
+                            <li>Developed frontend website features using HTML, CSS, and JavaScript.</li>
+                            <li>Assisted in testing, debugging, and improving website performance and usability.</li>
+                            <li>Collaborated with team members to meet project requirements and deadlines.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="techstack">
+        <div class="tech-container">
+            <div style="text-align:center;margin-bottom:60px" data-aos="fade-up">
+                <div class="section-tag" style="justify-content:center;display:flex">Tech Stack</div>
+                <h2 class="section-title" style="text-align:center">Technologies I Use</h2>
+                <p class="section-sub" style="margin:0 auto;text-align:center">My toolkit for building modern
+                    applications and games.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="0"><i
+                        class="devicon-csharp-plain colored"></i><span>C#</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="50"><i
+                        class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="100"><i class="devicon-unity-original"
+                        style="color:var(--text)"></i><span>Unity</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="150"><i
+                        class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="200"><i
+                        class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="250"><i
+                        class="devicon-git-plain colored"></i><span>Git</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="300"><i
+                        class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="350"><i
+                        class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="400"><i
+                        class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="450"><i class="devicon-github-original"
+                        style="color:var(--text)"></i><span>GitHub</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="500"><i
+                        class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="550"><i
+                        class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="600"><i
+                        class="devicon-dot-net-plain colored"></i><span>.NET</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="650"><i
+                        class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="700"><i
+                        class="devicon-blender-original colored"></i><span>Blender</span></div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="700"><i
+                        class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-container">
+            <div data-aos="fade-up" style="margin-bottom:60px">
+                <div class="section-tag">Get In Touch</div>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h3>Say Hello! 👋</h3>
+                    <p>Whether you have a project in mind, want to collaborate, or just want to chat about tech and
+                        games — I'm always open. Feel free to reach out!</p>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-detail-text"><strong>Email</strong><span>Nprexlouis@gmail.com</span></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-detail-text"><strong>Number</strong><span>09636923199</span></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-detail-text"><strong>Status</strong><span style="color:var(--green)">●
+                                Available for opportunities</span></div>
+                    </div>
+                    <div class="social-row"><a href="https://github.com/Prexaintgood" class="footer-social-btn" title="GitHub" target="_blank">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/prexlouis.nati" class="footer-social-btn" title="Facebook"
+                        target="_blank">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24H12.82v-9.294H9.692V11.08h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.309h3.587l-.467 3.626h-3.12V24h6.114C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
+                        </svg>
+                    </a></div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                    <div class="contact-form" id="contactForm">
+                        <div class="form-group"><label for="contactName">Name</label><input type="text" id="contactName"
+                                placeholder="Your name" /></div>
+                        <div class="form-group"><label for="contactEmail">Email</label><input type="email"
+                                id="contactEmail" placeholder="your@email.com" /></div>
+                        <div class="form-group"><label for="contactMsg">Message</label><textarea id="contactMsg"
+                                placeholder="Tell me about your project..."></textarea></div><button class="submit-btn"
+                            id="submitBtn"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>Send Message</button>
+                        <div id="formSuccess"
+                            style="display:none;color:var(--green);font-size:0.9rem;padding:12px;background:rgba(74,222,128,0.1);border-radius:var(--radius-sm);border:1px solid rgba(74,222,128,0.2)">
+                            ✅ Message sent! I'll get back to you soon.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">PREX</div>
+                <p>Building digital experiences with clean code and creative vision. Always open to new opportunities.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#techstack">Tech Stack</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="footerResume">Resume</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="footer-social-row">
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/Prexaintgood" class="footer-social-btn" title="GitHub" target="_blank">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/prexlouis.nati" class="footer-social-btn" title="Facebook"
+                        target="_blank">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24H12.82v-9.294H9.692V11.08h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.309h3.587l-.467 3.626h-3.12V24h6.114C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("p29iNautvz8KdFgia");
+    </script>
+</body>
+
+</html>
